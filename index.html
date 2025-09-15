@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soulix - Building the Future with AI Intelligence</title>
+    <meta name="description" content="Soulix creates cutting-edge AI agents, automation tools, AR-based solutions, and custom digital products for businesses and educational institutions.">
+    <meta name="keywords" content="AI, artificial intelligence, automation, AR solutions, digital products, business technology">
+    <meta name="author" content="Soulix">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Soulix - Building the Future with AI Intelligence">
+    <meta property="og:description" content="Experience next-generation AI solutions with cutting-edge automation tools and immersive AR experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://soulix.netlify.app">
+    <meta property="og:image" content="./assets/soulixlogo.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Soulix - Building the Future with AI Intelligence">
+    <meta name="twitter:description" content="Experience next-generation AI solutions with cutting-edge automation tools and immersive AR experiences.">
+    <meta name="twitter:image" content="./assets/soulixlogo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/soulixlogo.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="./assets/soulixlogo.png" as="image" type="image/png">
+    <link rel="preload" href="./assets/soulix t1.png" as="image" type="image/png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.57/build/spline-viewer.js"></script>
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Initializing Future...</div>
+        </div>
+    </div>
+
+    <!-- Background Effects -->
+    <div class="background-effects">
+        <img class="image-gradient" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" alt="gradient">
+        <div class="layer-blur"></div>
+        <div class="particles-container" id="particles"></div>
+        <div class="gradient-orbs">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#hero" class="brand-logo" style="display: flex; align-items: center;">
+                    <img src="./assets/soulixlogo.png" alt="Soulix Logo" loading="eager" class="logo-blend soulix-logo" style="display:block;">
+                </a>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <a href="#products" class="nav-link" data-aos="fade-down" data-aos-duration="1500">Products</a>
+                <a href="#ar-experience" class="nav-link" data-aos="fade-down" data-aos-duration="1800">AR Experience</a>
+                <a href="#how-it-works" class="nav-link" data-aos="fade-down" data-aos-duration="2100">How it Works</a>
+                <a href="#why-different" class="nav-link" data-aos="fade-down" data-aos-duration="2400">Why Different</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+    <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav-menu" id="mobile-nav-menu" aria-hidden="true" role="dialog">
+            <div class="mobile-nav-header">
+                <a class="brand-logo mobile-brand" href="#hero" style="display: flex; align-items: center;">
+                    <img src="./assets/soulixlogo.png" alt="Soulix Logo" loading="eager" class="logo-blend soulix-logo" style="display:block;">
+                </a>
+                <button class="close-menu" id="mobile-close" aria-label="Close menu">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="mobile-nav-links">
+                <a href="#products" class="mobile-nav-link">Products</a>
+                <a href="#ar-experience" class="mobile-nav-link">AR Experience</a>
+                <a href="#how-it-works" class="mobile-nav-link">How it Works</a>
+                <a href="#why-different" class="mobile-nav-link">Why Different</a>
+                <a href="privacy.html" class="mobile-nav-link">Privacy Policy</a>
+                <a href="terms.html" class="mobile-nav-link">Terms of Service</a>
+            </div>
+            <div class="mobile-cta">
+                <a href="https://chat.whatsapp.com/LuQmRMN3SvKGWDD88Rdpl8?mode=ems_copy_t" target="_blank" rel="noopener noreferrer" class="cta-btn">Join Community <i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <!-- Dim overlay behind floating sheet -->
+        <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="content-wrapper">
+                <!-- Hero Badge -->
+                <div class="tag-box" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="1500">
+                    <div class="tag">AI REVOLUTION &wedgeq;</div>
+                </div>
+                
+                <!-- Main Heading -->
+                <h1 class="hero-title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="2000">
+                    BUILDING THE<br>
+                    <span class="gradient-text">FUTURE</span><br>
+                    WITH AI
+                </h1>
+                
+                <!-- Description -->
+                <p class="hero-description" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="2500">
+                    Experience the next generation of artificial intelligence. Join our community of innovators 
+                    shaping tomorrow's world with cutting-edge AI solutions, automation tools, and immersive AR experiences.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="hero-cta" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" data-aos-duration="3000">
+                    <a href="https://chat.whatsapp.com/LuQmRMN3SvKGWDD88Rdpl8?mode=ems_copy_t" class="btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Join our WhatsApp community (opens in a new tab)">
+                        <span>Join Community</span>
+                    </a>
+                    <a href="#features" class="btn-secondary">
+                        <span>Explore Features</span>
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 3D Robot/AI Visualization -->
+        <div class="hero-3d" id="ar-experience">
+            <div class="model-container">
+                <spline-viewer 
+                    url="https://prod.spline.design/BahrOUjgXMy6fOa1/scene.splinecode" 
+                    background="transparent"
+                    loading-anim="true"
+                    mouse-controls="true"
+                    touch-controls="true"
+                    disable-zoom="false"
+                    controls="true">
+                </spline-viewer>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
+            <div class="scroll-dot"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span class="badge-icon">✨</span>
+                    <span>Capabilities</span>
+                </div>
+                <h2 class="section-title">Powered by Advanced <span class="gradient-text">AI Intelligence</span></h2>
+                <p class="section-description">
+                    Our cutting-edge AI technology delivers unparalleled experiences across multiple domains,
+                    transforming how businesses operate and innovate.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <div class="icon-3d ai-brain-icon" id="ai-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <h3 class="feature-title">Intelligent Processing</h3>
+                    <p class="feature-description">
+                        Advanced neural networks that understand context, learn from patterns, and deliver personalized experiences with unprecedented accuracy.
+                    </p>
+                    <div class="feature-glow"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <div class="icon-3d automation-icon" id="automation-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <h3 class="feature-title">Smart Automation</h3>
+                    <p class="feature-description">
+                        Seamless workflow automation that adapts to your needs, scales with your business growth, and optimizes resource allocation.
+                    </p>
+                    <div class="feature-glow"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <div class="icon-3d insights-icon" id="insights-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <h3 class="feature-title">Predictive Insights</h3>
+                    <p class="feature-description">
+                        Data-driven predictions that help you make informed decisions, anticipate trends, and stay ahead of the competition.
+                    </p>
+                    <div class="feature-glow"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating 3D Elements -->
+        <div class="floating-elements">
+            <div class="floating-cube cube-1"></div>
+            <div class="floating-cube cube-2"></div>
+            <div class="floating-sphere sphere-1"></div>
+            <div class="floating-pyramid pyramid-1"></div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span class="badge-icon">🛡️</span>
+                    <span>Solutions</span>
+                </div>
+                <h2 class="section-title">Products that <span class="gradient-text">Redefine Digital</span> Experiences</h2>
+                <p class="section-description">
+                    Our suite of AI-driven products helps businesses automate processes, enhance customer experiences, 
+                    and leverage cutting-edge technology for sustainable growth.
+                </p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-visual">
+                        <img class="product-image kenburns" src="./assets/AR Food Menu.png" alt="AR Menu System preview" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tag">AR Technology</div>
+                        <h3 class="product-title">AR Menu System</h3>
+                        <p class="product-description">
+                            Transform customer dining experiences with interactive 3D food presentations 
+                            and real-time nutritional information overlays.
+                        </p>
+                        <a href="#contact" class="product-link">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-visual">
+                        <img class="product-image kenburns object-top" src="./assets/2024-11-26T22-30-19.965Z-8M0zKrs643tMuHhkzWQ1NJZ0jVaWVMJDm.webp" alt="Learning AI Assistants preview" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tag">AI Agent</div>
+                        <h3 class="product-title">Learning AI Assistants</h3>
+                        <p class="product-description">
+                            Personalized AI learning companions that adapt to individual student needs 
+                            and provide custom educational pathways.
+                        </p>
+                        <a href="#contact" class="product-link">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="product-visual">
+                        <img class="product-image kenburns no-kenburns object-left-top" src="./assets/business-process-automation.png" alt="Business Process Automation preview" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tag">Automation</div>
+                        <h3 class="product-title">Business Process Automation</h3>
+                        <p class="product-description">
+                            AI-driven workflows that streamline operations, reduce human error, 
+                            and optimize resource allocation across your organization.
+                        </p>
+                        <a href="#contact" class="product-link">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="product-visual">
+                        <img class="product-image kenburns" src="./assets/Software_Developer_Getty_RossHelen.jpg" alt="Custom Software Solutions preview" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tag">Software</div>
+                        <h3 class="product-title">Custom Software Solutions</h3>
+                        <p class="product-description">
+                            Scalable software built for your business, specializing in mobile apps, 
+                            web applications, and end-to-end digital solutions.
+                        </p>
+                        <a href="#contact" class="product-link">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge"><span class="badge-icon">⚙️</span><span>Process</span></div>
+                <h2 class="section-title">How it <span class="gradient-text">Works</span></h2>
+                <p class="section-description">From discovery to launch — a clear, collaborative path to value.</p>
+            </div>
+            <div class="hiw-grid">
+                <div class="hiw-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="hiw-step">01</div>
+                    <h3>Discover</h3>
+                    <p>We align on goals, users, and success metrics. Quick workshops, fast clarity.</p>
+                </div>
+                <div class="hiw-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="hiw-step">02</div>
+                    <h3>Design</h3>
+                    <p>Prototypes you can click, iterate, and validate. UX-first with real-world feedback.</p>
+                </div>
+                <div class="hiw-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="hiw-step">03</div>
+                    <h3>Build</h3>
+                    <p>Agile sprints ship value early: AI agents, automations, and 3D experiences.</p>
+                </div>
+                <div class="hiw-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="hiw-step">04</div>
+                    <h3>Launch</h3>
+                    <p>Deploy, measure, and optimize. We track KPIs and scale what works.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Different Section -->
+    <section id="why-different" class="why-different">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge"><span class="badge-icon">✨</span><span>Why Different</span></div>
+                <h2 class="section-title">What Makes Us <span class="gradient-text">Different</span></h2>
+                <p class="section-description">We blend AI, automation, and premium UX to deliver fast, measurable outcomes.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-icon"><i class="fas fa-cube"></i></div>
+                    <h3>Real-time 3D</h3>
+                    <p>Immersive, performant 3D visuals that run smoothly across devices.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Automation-first</h3>
+                    <p>Reduce manual work with robust AI agents and process automation.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>UX Excellence</h3>
+                    <p>Beautiful, accessible experiences that users love and understand.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Speed to Value</h3>
+                    <p>Ship iteratively with clear KPIs — see impact in weeks, not months.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <span class="badge-icon">👥</span>
+                    <span>Meet Our Team</span>
+                </div>
+                <h2 class="section-title">The <span class="gradient-text">Visionaries</span> Behind Soulix</h2>
+                <p class="section-description">
+                    Our diverse team of AI researchers, engineers, and innovators are dedicated to 
+                    building the future of artificial intelligence and digital experiences.
+                </p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-photo">
+                        <img src="./assets/pranav.jpg" alt="Pranav Navghare" class="team-portrait head-focus">
+                        <div class="member-glow"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Pranav Navghare</h3>
+                        <p class="member-role">Executive Chairman & Co-Founder</p>
+                        <p class="member-bio">
+                            A seasoned technology leader with experience as President of the Google Developer Group and VP of CSEC. His expertise in AI, cybersecurity, and full-stack development is proven by a record of winning 13 hackathons, which now informs his work building expert solutions for the company.
+                        </p>
+                    </div>
+                    <div class="member-social" style="margin-top:auto; justify-content:center; display:flex; gap:var(--space-lg);">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="X (Twitter)" class="icon-x-wrapper" title="X">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" class="icon-x"><path fill="currentColor" d="M18.244 2h3.308l-7.227 8.26L24 22h-6.557l-5.105-6.671L6.5 22H3.19l7.73-8.85L0 2h6.743l4.713 6.231L18.244 2z"/></svg>
+                        </a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member-photo">
+                        <img src="./assets/pranav-parate.jpg" alt="Pranav Parate" class="team-portrait head-focus">
+                        <div class="member-glow"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Pranav Parate</h3>
+                        <p class="member-role">CEO & Co-Founder</p>
+                        <p class="member-bio">
+                            Full stack developer and front end designer. I build IoT devices and have knowledge of C, Python and backend development.
+                        </p>
+                    </div>
+                    <div class="member-social" style="margin-top:auto; justify-content:center; display:flex; gap:var(--space-lg);">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="X (Twitter)" class="icon-x-wrapper" title="X">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" class="icon-x"><path fill="currentColor" d="M18.244 2h3.308l-7.227 8.26L24 22h-6.557l-5.105-6.671L6.5 22H3.19l7.73-8.85L0 2h6.743l4.713 6.231L18.244 2z"/></svg>
+                        </a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="600">
+                        <div class="member-photo">
+                            <img src="./assets/tejas.jpg" alt="Tejas Ingole" class="team-portrait">
+                            <div class="member-glow"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Tejas Ingole</h3>
+                            <p class="member-role">COO & Co-Founder</p>
+                            <p class="member-bio">
+                                I am a web developer and designer with expertise in IoT, databases, and creative design. I build functional web solutions, design user-friendly interfaces, and create impactful logos that blend technology with creativity.
+                            </p>
+                        </div>
+                        <div class="member-social" style="margin-top:auto; justify-content:center; display:flex; gap:var(--space-lg);">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="X (Twitter)" class="icon-x-wrapper" title="X">
+                                <svg aria-hidden="true" viewBox="0 0 24 24" class="icon-x"><path fill="currentColor" d="M18.244 2h3.308l-7.227 8.26L24 22h-6.557l-5.105-6.671L6.5 22H3.19l7.73-8.85L0 2h6.743l4.713 6.231L18.244 2z"/></svg>
+                            </a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="800">
+                        <div class="member-photo">
+                            <img src="./assets/prajwal.jpg" alt="Prajwal Fating" class="team-portrait">
+                            <div class="member-glow"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Prajwal Fating</h3>
+                            <p class="member-role">CFO & Co-Founder</p>
+                            <p class="member-bio">
+                                I am a finance and operations specialist with a passion for technology. I ensure our projects are sustainable, budgets are optimized, and our vision is achieved through strategic planning and resource management.
+                            </p>
+                        </div>
+                        <div class="member-social" style="margin-top:auto; justify-content:center; display:flex; gap:var(--space-lg);">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="X (Twitter)" class="icon-x-wrapper" title="X">
+                                <svg aria-hidden="true" viewBox="0 0 24 24" class="icon-x"><path fill="currentColor" d="M18.244 2h3.308l-7.227 8.26L24 22h-6.557l-5.105-6.671L6.5 22H3.19l7.73-8.85L0 2h6.743l4.713 6.231L18.244 2z"/></svg>
+                            </a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" data-aos="fade-up">
+        <div class="cta-background"></div>
+        <div class="container">
+            <div class="cta-content">
+                <div class="section-badge">
+                    <span class="badge-icon">�</span>
+                    <span>Get Started</span>
+                </div>
+                <h2 class="section-title">Ready to Transform Your <span class="gradient-text">Future</span>?</h2>
+                <p class="section-description">
+                    Join forward-thinking organizations already leveraging our AI-driven solutions. 
+                    Experience the future firsthand with our cutting-edge technology.
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://chat.whatsapp.com/LuQmRMN3SvKGWDD88Rdpl8?mode=ems_copy_t" class="btn-primary" id="final-join" target="_blank" rel="noopener noreferrer" aria-label="Join our WhatsApp community (opens in a new tab)">
+                        <span>Join My Community</span>
+                    </a>
+                    <a href="#features" class="btn-secondary">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" style="background: #0f0f0f; padding: 60px 20px 30px; border-top: 1px solid rgba(255,255,255,0.05);">
+        <!-- Mobile Responsive CSS -->
+        <style>
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr !important; gap: 40px !important; text-align: center !important; }
+            .footer-links-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .footer-bottom-flex { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
+        }
+        @media (max-width: 480px) {
+            .footer-links-grid { grid-template-columns: 1fr !important; }
+        }
+        </style>
+        
+        <div class="footer-grid" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 60px; margin-bottom: 48px; align-items:start;">
+            <!-- Brand / Intro -->
+            <div style="display:flex; flex-direction:column; gap:20px;">
+                <div style="display:flex; align-items:center; gap:12px; color:#fff; font-size:24px; font-weight:700;">
+                    <img src="./assets/soulixlogo.png" alt="Soulix Logo" class="logo-blend soulix-logo" style="height:48px;width:auto;display:inline-block;vertical-align:middle;">
+                </div>
+                <p style="color: rgba(255,255,255,0.7); line-height:1.6; font-size:15px; max-width:340px;">
+                    Building the future with AI intelligence. Join us on this revolutionary journey towards a smarter, more connected world.
+                </p>
+                <div style="display:flex; gap:14px;">
+                    <a href="#" aria-label="LinkedIn" style="width:44px;height:44px;background:rgba(255,255,255,0.06);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.75);text-decoration:none;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.12);">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" style="width:44px;height:44px;background:rgba(255,255,255,0.06);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.75);text-decoration:none;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.12);">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="X (Twitter)" style="width:44px;height:44px;background:rgba(255,255,255,0.06);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.75);text-decoration:none;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.12);" class="icon-x-wrapper" title="X">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" class="icon-x"><path fill="currentColor" d="M18.244 2h3.308l-7.227 8.26L24 22h-6.557l-5.105-6.671L6.5 22H3.19l7.73-8.85L0 2h6.743l4.713 6.231L18.244 2z"/></svg>
+                    </a>
+                    <a href="mailto:hello@soulix.ai" aria-label="Email" style="width:44px;height:44px;background:rgba(255,255,255,0.06);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.75);text-decoration:none;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.12);">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product Links -->
+            <div>
+                <h4 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 16px;">Products</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+                    <li><a href="#products" style="color:rgba(255,255,255,0.7);font-size:14px;text-decoration:none;">AR Menu System</a></li>
+                    <li><a href="#products" style="color:rgba(255,255,255,0.7);font-size:14px;text-decoration:none;">Learning AI Assistants</a></li>
+                    <li><a href="#products" style="color:rgba(255,255,255,0.7);font-size:14px;text-decoration:none;">Process Automation</a></li>
+                    <li><a href="#products" style="color:rgba(255,255,255,0.7);font-size:14px;text-decoration:none;">Custom Software Solutions</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Links -->
+            <div>
+                <h4 style="color:#fff;font-size:16px;font-weight:600;margin:0 0 16px;">Company</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+                    <li><a href="#products" style="color:rgba(255,255,255,0.7);font-size:14px;text-decoration:none;">Products</a></li>
+                    <li><a href="#ar-experience" style="color:rgba(255,255,255,0.7);font-size:14px;text-decoration:none;">AR Experience</a></li>
+                    <li><a href="#how-it-works" style="color:rgba(255,255,255,0.7);font-size:14px;text-decoration:none;">How it Works</a></li>
+                    <li><a href="#why-different" style="color:rgba(255,255,255,0.7);font-size:14px;text-decoration:none;">Why Different</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Bottom Section -->
+        <div class="footer-bottom-flex" style="max-width:1200px;margin:0 auto;padding-top:28px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;color:rgba(255,255,255,0.55);font-size:13.5px;letter-spacing:.2px;">
+            <p style="margin:0;">&copy; 2025 Soulix. All rights reserved.</p>
+            <div style="display:flex;align-items:center;gap:14px;">
+                <a href="privacy.html" style="color:rgba(255,255,255,0.55);text-decoration:none;">Privacy Policy</a>
+                <span aria-hidden="true" style="color:rgba(255,255,255,0.4);">•</span>
+                <a href="terms.html" style="color:rgba(255,255,255,0.55);text-decoration:none;">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

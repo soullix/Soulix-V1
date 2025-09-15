@@ -1,0 +1,31 @@
+{
+  "name": "soulix-website",
+  "version": "1.0.0",
+  "description": "Soulix AI Intelligence Platform - Official Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python server.py --port 8000",
+    "dev": "python server.py --port 3000",
+    "build": "echo 'Static site - no build process required'",
+    "server": "python -m http.server 8000"
+  },
+  "keywords": [
+    "ai",
+    "artificial-intelligence",
+    "automation",
+    "ar",
+    "soulix",
+    "3d",
+    "animation"
+  ],
+  "author": "Soulix Team",
+  "license": "PROPRIETARY",
+  "homepage": "https://soulix.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soulix/website.git"
+  },
+  "engines": {
+    "python": ">=3.6"
+  }
+}

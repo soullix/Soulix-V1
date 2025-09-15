@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Soulix AI Solutions</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --color-background: #080808;
+      --color-text: #ffffff;
+      --color-text-secondary: rgba(255, 255, 255, 0.7);
+      --color-accent: #3b82f6;
+      --color-accent-light: #60a5fa;
+      --gradient-primary: linear-gradient(135deg, #ffffff 0%, #3b82f6 100%);
+      --gradient-secondary: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(59, 130, 246, 0.1) 100%);
+      --font-primary: 'Inter', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      background-color: var(--color-background);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Navigation */
+    .nav-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(8, 8, 8, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--color-text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-accent);
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 150px 0 80px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .page-title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: var(--gradient-primary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .page-subtitle {
+      font-size: 1.2rem;
+      color: var(--color-text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-content h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+      color: var(--color-text);
+    }
+
+    .section-content p {
+      margin-bottom: 1rem;
+      color: var(--color-text-secondary);
+    }
+
+    .section-content ul {
+      margin: 1rem 0 1rem 2rem;
+      color: var(--color-text-secondary);
+    }
+
+    .section-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-box {
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid var(--color-accent);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .contact-info {
+      background: var(--gradient-secondary);
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .contact-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .contact-details {
+      color: var(--color-text-secondary);
+    }
+
+    .contact-details a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    .contact-details a:hover {
+      color: var(--color-accent-light);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .content-section {
+        padding: 2rem;
+      }
+      
+      .container {
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+
+  <header class="nav-container">
+    <nav class="navbar">
+      <a class='logo' href='index.html'>
+  <img src="./assets/soulixlogo.png" alt="Soulix Logo" style="height: 56px; vertical-align: middle; margin-right: 14px;">
+      </a>
+      <ul class="nav-links">
+        <li><a href='index.html'>Home</a></li>
+         </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-subtitle">Your privacy is important to Soulix. This policy explains how we handle information related to your use of our services.</p>
+  <p style="color: var(--color-text-secondary); margin-top: 1rem; font-size: 0.9rem;">Last updated: September 16, 2025</p>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">1. Information We Collect</h2>
+        <div class="section-content">
+          <p>
+            Soulix does not collect personal details such as your name, email address, or contact information when you use our AI services. We are committed to protecting your privacy and minimizing the data we process.
+          </p>
+          <h3>Usage Information</h3>
+          <p>
+            We may collect limited technical information automatically to ensure the security and performance of our services, such as:
+          </p>
+          <ul>
+            <li>Device information and general usage statistics</li>
+            <li>Interaction data with our AI services (anonymized and aggregated)</li>
+          </ul>
+          <h3>AI Training Data</h3>
+          <p>
+            Any data used for improving our AI models is fully anonymized and stripped of personal identifiers. We do not use your personal information for AI training.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">2. How We Use Information</h2>
+        <div class="section-content">
+          <p>We use collected technical and anonymized information to:</p>
+          <ul>
+            <li>Maintain and improve our AI services and platform</li>
+            <li>Monitor system performance and security</li>
+            <li>Analyze general usage trends (without identifying individuals)</li>
+            <li>Enhance AI models using only anonymized, aggregated data</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>AI Model Training:</strong> Only anonymized and aggregated data is used to improve our AI models. No personal details are ever used for training.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">3. Information Sharing and Disclosure</h2>
+        <div class="section-content">
+          <p>
+            We do not sell, trade, or transfer your personal information to third parties. Limited technical data may be shared with trusted service providers (such as cloud hosting or analytics) solely for operating and improving our services, and always in compliance with privacy standards.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">4. Data Security</h2>
+        <div class="section-content">
+          <p>We implement technical and organizational measures to protect all information processed by our systems, including:</p>
+          <ul>
+            <li>Encryption of data in transit and at rest</li>
+            <li>Regular security assessments</li>
+            <li>Access controls and authentication</li>
+            <li>Employee privacy training</li>
+          </ul>
+          <div class="highlight-box">
+            <strong>AI-Specific Security:</strong> Our AI systems are designed with privacy by design principles, including data minimization and secure computation.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">5. Your Rights and Choices</h2>
+        <div class="section-content">
+          <p>
+            Since we do not collect personal details, requests for access, correction, or deletion of personal data generally do not apply. If you have any concerns about your privacy, please contact us.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">6. International Data Transfers</h2>
+        <div class="section-content">
+          <p>
+            Soulix operates globally. Any technical data processed may be transferred and stored in accordance with applicable data protection laws and with appropriate safeguards in place.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">7. Children's Privacy</h2>
+        <div class="section-content">
+          <p>
+            Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">8. Changes to This Policy</h2>
+        <div class="section-content">
+          <p>
+            We may update this Privacy Policy from time to time. Changes will be posted on this page and, where appropriate, notified to you.
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <h3 class="contact-title">Contact Information</h3>
+        <div class="contact-details">
+          <p>For questions about this Privacy Policy, please contact us:</p>
+          <p>Email: <a href="mailto:info@soulix.com">info@soulix.com</a></p>
+          <p>Address: Soulix, HBtown, ED Building 3 floor, Nagpur, Maharashtra, India</p>
+          <p>Phone: <a href="tel:+91 94215 99034">+91 94215 99034</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
